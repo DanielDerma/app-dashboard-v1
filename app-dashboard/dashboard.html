@@ -44,6 +44,11 @@
   <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Account</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
       <a class="nav-link" href="#">Log out</a>
     </li>
   </ul>
@@ -56,25 +61,24 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+ <a class="nav-link nav-link-item" aria-current="page" href="#list-item">
               <span data-feather="bar-chart-2"></span>
               Employers 
               <span>
                 -@daniel
               </span>
-            </a>
+            </a> 
           </li>
-
         </ul>
       </div>
     </nav>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-<div class="custom-file mb-3 drag">
-  <input type="file" class="custom-file-input" id="customFile">
-  <label class="custom-file-label " for="customFile">Choose file</label>
-</div>
-       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <div class="custom-file drag" id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+      <p>Arrastra y suelta un archivos .csv a esta zona ...</p>
+    </div>
+
+       <div id="list-item" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Employers -@daniel</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
@@ -84,9 +88,9 @@
         </div>
       </div>
 
-      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> 
+      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>  
 
-       <h2>Employers</h2>
+ <h2>Employers</h2>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <caption>
@@ -215,8 +219,8 @@
               <td>libero</td>
             </tr>
           </tbody>
-        </table>
-      </div> 
+        </table> 
+      </div>
     </main>
   </div>
 </div>
